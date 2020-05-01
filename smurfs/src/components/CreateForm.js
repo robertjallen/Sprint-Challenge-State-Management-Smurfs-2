@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { SmurfContext } from "../contexts/SmurfContext";
+import axios from 'axios'
 
 const CreateForm = props => {
 
@@ -22,7 +23,12 @@ const CreateForm = props => {
     if (!newSmurf.name || !newSmurf.age || !newSmurf.height) {
       alert("Please fill out all fields!");
     } else {
-      setSmurfs([newSmurf, ...smurfs]);
+      axios.post('http://localhost:3333/smurfs', newSmurf)
+      .then(res => {
+        console.log("POST response", res.data)
+        setSmurfs(res.data)
+      })
+      // setSmurfs([newSmurf, ...smurfs]);
       resetForm();
     }
   };

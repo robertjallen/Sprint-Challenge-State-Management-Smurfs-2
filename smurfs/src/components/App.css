@@ -1,3 +1,27 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.list{
+margin: 0 auto;
+border: 1px solid blue;
+background-color: cornflowerblue;
+padding: 5px;
+}
+
+.card{
+  margin-top: 5px;
+  border: 1px solid cornflowerblue;
+  width: 400px; 
+  background: #fff;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
