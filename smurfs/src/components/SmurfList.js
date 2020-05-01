@@ -18,13 +18,16 @@ export default function SmurfList(props) {
 
     return (
         <div className="list">
-            <h1>SMURFS! 2.0 W/ Context</h1>
+            
             {
             smurfs.map((smurf)=>{
                 return <div className="card">
-                            <p>NAME: {smurf.name}</p>
-                            <p>AGE: {smurf.age}</p>
-                            <p>HEIGHT: {smurf.height}</p>
+                            <div className="details">
+                                <p>NAME: {smurf.name}</p>
+                                <p>AGE: {smurf.age}</p>
+                                <p>HEIGHT: {smurf.height}</p>
+                            </div>
+                            
                             <button onClick={()=> deleteSmurf(smurf.id)}>Delete</button>   
                         </div>
             })

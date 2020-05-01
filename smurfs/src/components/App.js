@@ -23,13 +23,15 @@ export default function App() {
 
 
   return (
-    <div className="App">
-      <SmurfContext.Provider value={{smurfs, setSmurfs}}>
-          
+    <>
+      <h1>SMURFS! 2.0 W/ Context</h1>
+      <div className="App">
+        <SmurfContext.Provider value={{smurfs, setSmurfs}}>
           <CreateForm />
           <SmurfList />
-        </SmurfContext.Provider> 
-    </div>
+        </SmurfContext.Provider>
+      </div>
+    </>
   )
 }
 

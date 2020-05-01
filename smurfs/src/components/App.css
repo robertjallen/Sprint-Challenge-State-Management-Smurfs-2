@@ -1,11 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-.App {
+#root{
+  font-family: 'Shadows Into Light', cursive;
   text-align: center;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  min-height: 100vh;
+}
+
+#root h1{
+  background: #fff;
+  color: blue;
+  font-weight: bolder;
+  text-shadow: 2px 2px cornflowerblue;
+}
+.App {
+  padding: 32px;
   display: flex;
   flex-direction: row-reverse;
 }
@@ -14,8 +27,19 @@
   margin: 0 auto;
   border: 1px solid blue;
   background-color: cornflowerblue;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 4px;
   width: 66%;
+}
+
+form{
+  width: 33%;
+  display: inline-flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background: lightblue;
+  border-radius: 4px;
+  padding: 10px;
 }
 
 .card{
@@ -27,7 +51,12 @@
   margin: 0 auto;
   text-align: left;
   margin-top: 5px;
+  font: 400 13.3333px Arial;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
 }
+
 .row{
   width: 100%;
   display: flex;
@@ -41,16 +70,7 @@ button{
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
-form{
-  width: 33%;
-  display: inline-flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  background: lightblue;
-  border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 20px;
-}
+
 
 input {
   width: 80%;
