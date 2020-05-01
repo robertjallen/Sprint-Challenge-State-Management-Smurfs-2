@@ -63,8 +63,10 @@ const CreateForm = props => {
         value={newSmurf.height}
       />
       
-      <button type="submit">Submit</button>
-      <button type="button" onClick={resetForm}>Reset</button>
+      <div className="row">
+        <button type="submit">Submit</button>
+        <button type="button" onClick={resetForm}>Reset</button>
+      </div>
 
     </form>
   );
